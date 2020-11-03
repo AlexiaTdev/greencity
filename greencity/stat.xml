@@ -1,0 +1,51 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<stat>
+    <trafficurbain>
+        <voitureelectrique></voitureelectrique>
+        <voitureessenceoudiesel></voitureessenceoudiesel>
+        <transportencommun></transportencommun>
+        <velo></velo>
+        <pedestre></pedestre>
+    </trafficurbain>
+    <energie>
+        <typesfossile></typesfossile>
+        <typerenouvelable></typerenouvelable>
+        <équipementpopulationenrenouvelable><équipementpopulationenrenouvelable>
+    </energie>
+    <ecosysteme>
+        <abeille></abeille>
+    </ecosysteme>
+    <espacevert>
+        <potagerurbain></potagerurbain>
+        <parc></parc>
+        <vert></vert>
+    </espacevert>
+    <population>
+        <santeentale></santeentale>
+        <santephysique></santephysique>
+        <bienetre><bienetre>
+        <adhesionecologique><adhesionecologique>
+    </population>
+    <pollution>
+        <decheturbain></decheturbain>
+        <co2></co2>
+        <sonore></sonore>
+        <lumineuse></lumineuse>
+        <triselectif></triselectif>
+    </pollution>
+    <Infrastructure>
+        <centraletrisuperieur></centraletrisuperieur>
+        <gigafactory></gigafactory>
+        <parceolien></parceolien>
+        <gestioneauusee></gestioneauusee>
+        <transportinfrastructure>
+            <tramway></tramway>
+            <metro></metro>
+            <hyperloop></hyperloop>
+        </transportinfrastructure>
+        <aeroport></aeroport>
+        <rondpointvegetal></rondpointvegetal>
+    </infrastructure>
+</stat>
+	
+	
