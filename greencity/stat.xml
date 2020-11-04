@@ -1,6 +1,6 @@
 <?xml version ="1.0" encoding="UTF-8"?>
 <stat>
-	<budgetglobal>1000000<budgetglobal>
+	<budgetglobal>1000000</budgetglobal>
     <trafficurbain>
 		<traficglobal>20</traficglobal>
         <voitureelectrique>5</voitureelectrique>
