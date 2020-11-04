@@ -1,6 +1,8 @@
 <?xml version ="1.0" encoding="UTF-8"?>
 <stat>
+	<budgetglobal>1000000<budgetglobal>
     <trafficurbain>
+		<traficglobal>20</traficglobal>
         <voitureelectrique>5</voitureelectrique>
         <voitureessenceoudiesel>85</voitureessenceoudiesel>
         <transportencommun>0</transportencommun>
@@ -13,11 +15,9 @@
         <équipementpopulationenrenouvelable>0</équipementpopulationenrenouvelable>
     </energie>
     <ecosysteme>
-        <abeille></abeille>
+        <abeille>10</abeille>
     </ecosysteme>
     <espacevert>
-        <potagerurbain>0</potagerurbain>
-        <parc>0</parc>
         <vert>2</vert>
     </espacevert>
     <population>
@@ -45,6 +45,8 @@
         </transportinfrastructure>
         <aeroport>False</aeroport>
         <rondpointvegetal>False</rondpointvegetal>
+		<bornederecharge>False</bornederecharge>
+		<potagerurbain>False</potagerurbain>
     </infrastructure>
 </stat>
 	
