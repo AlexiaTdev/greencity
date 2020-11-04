@@ -1,6 +1,49 @@
-<?xml version ="1.0" encoding="ISO-8859-1"?>
+<?xml version ="1.0" encoding="UTF-8"?>
 <cartes>
     <carte>
-        <question>maquestion1</question>
-
-//carte=['maquestion1', [['proposition1', [("stat1","val"), ("stat","val")]], ["proposition2", [("stat1","val"), ("stat","val")]], ["proposition3", [("stat1","val"), ("stat","val")]], ["proposition4", [("stat1","val"), ("stat","val")]]]];
+        <question>Vous avez des problèmes de trafic</question>
+        <proposition>Vous proposez une alternances de circulation des plaques dans la ville</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous mettez à disposition des velos dans la ville</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous mettez en place une nouvelle ligne de transport en commun</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous mettez un radard a tout les feux rouges de la ville</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+    </carte>
+    <carte>
+        <question>Afin d'augmenter le nombre de véhicules électriques dans votre ville</question>
+        <proposition>Vous proposez un bonus à l'achat de ce type de véhicule</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous envoyez de la pub pour ces véhicules</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous faites un discours sur le bienfait des voitures électriques</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+        <proposition>Vous installez des bornes de recharges pour les véhicules électriques</proposition>
+            <statistique>stat1</statistique>
+                <valeur>val</valeur>
+            <statistique>stat2</statistique>
+                <valeur>val</valeur>
+    </carte>
+</cartes>

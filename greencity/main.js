@@ -1,99 +1,61 @@
 let playing=false;
 let score=0;
-let action;
-let timeremain;
-
-let carte=['maquestion1', [['proposition1', [("stat1","val"), ("stat","val")]], ["proposition2", [("stat1","val"), ("stat","val")]], ["proposition3", [("stat1","val"), ("stat","val")]], ["proposition4", [("stat1","val"), ("stat","val")]]]];
-
-
 
 
 document.getElementById('start').onclick=function(){
-    
-    if(playing===true)
-        {
-           location.reload();
-           genQA();
+    //location.reload();
+    generatetxt('carte.xml');
+    generatetxt()
+}
+/**
+document.getElementById('bouton').onclick=function(){
+    re  affiche les stat en cours
+}*/
+
+function generatetxt(nomFichier) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            chargement(this);
         }
-    else
-    {
-        playing=true;
-        //document.getElementById('scoreValue').innerHTML = score ;
-        //document.getElementById('time').style.display="block"; 
-        //timeremain=60;
-        genQA();
-        //document.getElementById('start').innerHTML="Reset Game";
-       
-        //startCount();
+    };
+    xhttp.open("GET", nomFichier, true);
+    xhttp.send();
+}
+
+function chargement(xml) {
+    //recupere les cartes
+    var xmlDoc = xml.responseXML;
+
+    //on choisis la carte
+    cardNumber=0;
+
+    //on récupère la carte
+    cartes = xmlDoc.getElementsByTagName('carte');
+    question= cartes[cardNumber].childNodes[1].textContent;
+    prop1=cartes[cardNumber].getElementsByTagName('proposition')[0].childNodes[0].nodeValue;
+    prop2=cartes[cardNumber].getElementsByTagName('proposition')[1].childNodes[0].nodeValue;
+
+    //On affiche les elements dans le html
+    document.getElementById('note').textContent = question;
+    for (i=0; i<4; i++) {
+        document.getElementById('option'+ (i+1)).textContent = cartes[cardNumber].getElementsByTagName('proposition')[i].childNodes[0].nodeValue;
     }
-    
+
+    //recupere les stats
+    var xmlDoc2 = xml.responseXML;
+
+    //on affiche les stat
+    stataffichee = xmlDoc2.getElementsByTagName('stat');
+    //trafficvoitureelectrique = voitureelectrique
+    console.log(stataffichee);
+
+
 }
 
-
-function startCount()
-{
-    
-   action = setInterval(function(){
-       timeremain -=1;
-       document.getElementById('timeremain').innerHTML = timeremain;
-       if(timeremain===0)
-           {
-               document.getElementById('time').style.display="none";
-               gameOver();
-           }
-   },10);
-}
-
-
+/**
 function gameOver()
 {
     document.getElementById('gameover').style.display="block";
     document.getElementById('scoreno').innerHTML=score;
-}
-
-function genQA() {
-
-    /**var x=Math.round(10*Math.random());
-    var y=Math.round(10*Math.random());
-    correctAnswer= x*y;
-    document.getElementById('qtn').textContent=x +' x '+y;
-    var correctPostion= 1+Math.round(3*Math.random());
-    document.getElementById('option'+correctPostion).innerHTML=correctAnswer;**/
-
-    document.getElementById('qtn').textContent= 'essai';
-    document.getElementById('note').textContent= carte[0];
-    for (i=0; i<5; i++) {
-        document.getElementById('option'+ (i+1)).textContent= carte[1][i];
-    }
-}
-
-
-for(i=1;i<5;i++)
-{
-    document.getElementById('option'+i).onclick=function(){
-
-        if(playing===true)
-        {
-            
-
-            /**if(this.innerHTML==correctAnswer)
-            {
-                score++;
-                document.getElementById('scoreValue').innerHTML = score ;
-                hide('try');
-                show('correct');
-                setTimeout(function(){
-                    hide('correct');
-                },1000);
-                
-                genQA();
-            }else{
-                show('try');
-                hide('correct');
-                setTimeout(function(){
-                    hide('try');
-                },1000);
-            }*/
-        }
-    }
-}
+}*/

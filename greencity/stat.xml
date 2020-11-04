@@ -1,50 +1,50 @@
 <?xml version ="1.0" encoding="UTF-8"?>
 <stat>
     <trafficurbain>
-        <voitureelectrique></voitureelectrique>
-        <voitureessenceoudiesel></voitureessenceoudiesel>
-        <transportencommun></transportencommun>
-        <velo></velo>
-        <pedestre></pedestre>
+        <voitureelectrique>5</voitureelectrique>
+        <voitureessenceoudiesel>85</voitureessenceoudiesel>
+        <transportencommun>0</transportencommun>
+        <velo>5</velo>
+        <pedestre>5</pedestre>
     </trafficurbain>
     <energie>
-        <typesfossile></typesfossile>
-        <typerenouvelable></typerenouvelable>
-        <équipementpopulationenrenouvelable><équipementpopulationenrenouvelable>
+        <typesfossile>95</typesfossile>
+        <typerenouvelable>5</typerenouvelable>
+        <équipementpopulationenrenouvelable>0<équipementpopulationenrenouvelable>
     </energie>
     <ecosysteme>
         <abeille></abeille>
     </ecosysteme>
     <espacevert>
-        <potagerurbain></potagerurbain>
-        <parc></parc>
-        <vert></vert>
+        <potagerurbain>0</potagerurbain>
+        <parc>0</parc>
+        <vert>2</vert>
     </espacevert>
     <population>
-        <santeentale></santeentale>
-        <santephysique></santephysique>
-        <bienetre><bienetre>
-        <adhesionecologique><adhesionecologique>
+        <santeentale>50</santeentale>
+        <santephysique>50</santephysique>
+        <bienetre>50<bienetre>
+        <adhesionecologique>5<adhesionecologique>
     </population>
     <pollution>
-        <decheturbain></decheturbain>
-        <co2></co2>
-        <sonore></sonore>
-        <lumineuse></lumineuse>
-        <triselectif></triselectif>
+        <decheturbain>10</decheturbain>
+        <co2>20</co2>
+        <sonore>15</sonore>
+        <lumineuse>15</lumineuse>
+        <triselectif>5</triselectif>
     </pollution>
     <Infrastructure>
-        <centraletrisuperieur></centraletrisuperieur>
-        <gigafactory></gigafactory>
-        <parceolien></parceolien>
-        <gestioneauusee></gestioneauusee>
+        <centralelectriquesuperieur>False</centralelectriquesuperieur>
+        <gigafactory>False</gigafactory>
+        <parceolien>False</parceolien>
+        <gestioneauusee>False</gestioneauusee>
         <transportinfrastructure>
-            <tramway></tramway>
-            <metro></metro>
-            <hyperloop></hyperloop>
+            <tramway>False</tramway>
+            <metro>False</metro>
+            <hyperloop>False</hyperloop>
         </transportinfrastructure>
-        <aeroport></aeroport>
-        <rondpointvegetal></rondpointvegetal>
+        <aeroport>False</aeroport>
+        <rondpointvegetal>False</rondpointvegetal>
     </infrastructure>
 </stat>
 	
