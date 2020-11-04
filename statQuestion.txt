@@ -1,0 +1,84 @@
+Vous avez des problèmes de trafic
+	<traficglobal>+60
+	<co2>+15
+Vous proposez une alternances de circulation des plaques dans la ville
+	<traficglobal>%2
+	<co2>-8
+Vous mettez à disposition des velos dans la ville
+	<traficglobal>-30
+	<velo> +20
+	<voitureessenceoudiesel> -20
+	<co2>-8
+Vous mettez en place une nouvelle ligne de transport en commun ecofuel
+	<traficglobal>-60
+	<transportencommun>+30
+	<voitureessenceoudiesel>-30
+	<co2>-15
+Vous mettez un radard a tout les feux rouges de la ville 
+	<traficglobal>-20
+    <voitureelectrique>-2
+    <voitureessenceoudiesel>-10
+    <velo>+10
+    <pedestre>+5
+	<co2>-8
+****************************************************************************
+Afin d'augmenter le nombre de véhicules électriques dans votre ville
+Vous proposez un bonus à l'achat de ce type de véhicule (financement 130000e)
+	<bienetre>+10
+	<voitureelectrique>+20
+	<adhesionecologique>+5
+	<voitureessenceoudiesel>-20
+	<co2>-10
+	<budgetglobal>-30000e
+Vous envoyez de la pub pour ces véhicules
+	<bienetre>-10
+	<voitureelectrique>+2
+	<adhesionecologique>+5
+	<voitureessenceoudiesel>-2
+	<co2>-1
+Vous faites un discours sur le bienfait des voitures électriques
+	<bienetre>-8
+	<voitureelectrique>+2
+	<adhesionecologique>+10
+	<voitureessenceoudiesel>-2
+	<co2>-1
+Vous installez des bornes de recharges pour les véhicules électriques (financement 100000e)
+	<bienetre>+10
+	<voitureelectrique>+12
+	<adhesionecologique>+5
+	<voitureessenceoudiesel>-12
+	<co2>-5
+
+******************************************************************************
+Vous envisagez de mettre en place un nouveau potager urbain
+Vous louez gratuitement des terrains de la ville aux usagers (financement 50000e)
+	<budgetglobal>-50000
+	<decheturbain>+10
+	<abeille>+10
+	<potagerurbain>True
+	<vert>+10
+	<bienetre>+10
+	<santeentale>+8
+	<santephysique>+4
+	<adhesionecologique>+7
+Vous demandez au usager un abonnement afin d'avoir accès à ce terrain (financement 10000e)
+	<budgetglobal>-10000
+	<decheturbain>+8
+	<abeille>+10
+	<potagerurbain>True
+	<vert>+10
+	<bienetre>+5
+	<santeentale>+8
+	<santephysique>+4
+	<adhesionecologique>+5
+Vous employez quelqu'un pour qu'il gère le terrain (financement 100000e)
+	<budgetglobal>-100000
+	<abeille>+10
+	<potagerurbain>True
+	<vert>+10
+	<bienetre>+15
+	<santeentale>+8
+	<santephysique>+4
+	<adhesionecologique>+5
+Finalement j'aime pas les potagers
+	<abeille>-2
