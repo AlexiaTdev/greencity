@@ -28,13 +28,14 @@ function chargement(xml, fichierdepart) {
     if (fichierdepart=='cartes.xml') {
         //recupere les cartes
         var xmlDoc = xml.responseXML;
-        console.log(xmlDoc);
 
         //on choisis la carte
         cardNumber=0;
 
         //on récupère la carte
         cartes = xmlDoc.getElementsByTagName('carte');
+
+        //recuperation valeur de carte
         question= cartes[cardNumber].childNodes[1].textContent;
         prop1=cartes[cardNumber].getElementsByTagName('proposition')[0].childNodes[0].nodeValue;
         prop2=cartes[cardNumber].getElementsByTagName('proposition')[1].childNodes[0].nodeValue;
@@ -49,10 +50,13 @@ function chargement(xml, fichierdepart) {
         var xmlDoc2 = xml.responseXML;
 
         //on recupère les stat
-        //stat = xmlDoc2.getElementsByTagName('trafficurbain');
-        console.log(xmlDoc2);
+        stats = xmlDoc2.getElementsByTagName('stat');
 
+        //recuperation valeur de stat A COMPLETER
+        budgetglobal = stats[0].getElementsByTagName('budgetglobal')[0].childNodes[0].nodeValue;
+        
         //on affiche les stat
+        console.log(budgetglobal);
 
     }
     
