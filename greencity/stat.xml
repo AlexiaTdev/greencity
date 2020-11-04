@@ -10,7 +10,7 @@
     <energie>
         <typesfossile>95</typesfossile>
         <typerenouvelable>5</typerenouvelable>
-        <équipementpopulationenrenouvelable>0<équipementpopulationenrenouvelable>
+        <équipementpopulationenrenouvelable>0</équipementpopulationenrenouvelable>
     </energie>
     <ecosysteme>
         <abeille></abeille>
@@ -23,8 +23,8 @@
     <population>
         <santeentale>50</santeentale>
         <santephysique>50</santephysique>
-        <bienetre>50<bienetre>
-        <adhesionecologique>5<adhesionecologique>
+        <bienetre>50</bienetre>
+        <adhesionecologique>5</adhesionecologique>
     </population>
     <pollution>
         <decheturbain>10</decheturbain>
@@ -33,7 +33,7 @@
         <lumineuse>15</lumineuse>
         <triselectif>5</triselectif>
     </pollution>
-    <Infrastructure>
+    <infrastructure>
         <centralelectriquesuperieur>False</centralelectriquesuperieur>
         <gigafactory>False</gigafactory>
         <parceolien>False</parceolien>
