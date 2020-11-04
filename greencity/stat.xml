@@ -12,7 +12,7 @@
     <energie>
         <typesfossile>95</typesfossile>
         <typerenouvelable>5</typerenouvelable>
-        <equipementpopulationenrenouvelable>0</equipementpopulationenrenouvelable>
+        <équipementpopulationenrenouvelable>0</équipementpopulationenrenouvelable>
     </energie>
     <ecosysteme>
         <abeille>10</abeille>

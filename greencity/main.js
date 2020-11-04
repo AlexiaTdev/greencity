@@ -8,9 +8,11 @@ var xmlDoc2;
 //le deck de cartes : liste d indice des questions non posee
 var cartesrestantes;
 var nbrCartesRestantesDebutJeu;
-
-//la carte en cours
+//le numero de la carte en cours
 var cardNumber;
+//carte en cours
+var carte
+//lesvariables de jeu
 
 
 
@@ -19,14 +21,37 @@ document.getElementById('start').onclick=function(){
     generatetxt('cartes.xml');
     generatetxt('stat.xml');
 }
-console.log(document);
-/**
-document.getElementById('bouton').onclick=function(){
-    //tire une carte du paquet de cartes restantes
-
-    //re  affiche les stat en cours
+document.getElementById('option1').onclick=function(){
+    //modifier les stats en cours
+    integrerStat();
+    //re  affiche les stat en cours + nouvelle question
+    generatetxt('cartes.xml');
+    generatetxt('stat.xml');
     
-}*/
+}
+document.getElementById('option2').onclick=function(){
+    //modifier les stats en cours
+    integrerStat();
+    //re  affiche les stat en cours + nouvelle question
+    generatetxt('cartes.xml');
+    generatetxt('stat.xml');
+}
+document.getElementById('option3').onclick=function(){
+    //modifier les stats en cours
+    integrerStat();
+    //re  affiche les stat en cours + nouvelle question
+    generatetxt('cartes.xml');
+    generatetxt('stat.xml');
+}
+document.getElementById('option4').onclick=function(){
+    //modifier les stats en cours
+    integrerStat();
+    //re  affiche les stat en cours + nouvelle question
+    generatetxt('cartes.xml');
+    generatetxt('stat.xml');
+}
+
+
 
 function generatetxt(nomFichier) {
     var xhttp = new XMLHttpRequest();
@@ -55,8 +80,8 @@ function chargement(xml, fichierdepart) {
 
         //recuperation valeur de carte
         question= cartes[cardNumber].childNodes[1].textContent;
-        prop1=cartes[cardNumber].getElementsByTagName('proposition')[0].childNodes[0].nodeValue;
-        prop2=cartes[cardNumber].getElementsByTagName('proposition')[1].childNodes[0].nodeValue;
+        //prop1=cartes[cardNumber].getElementsByTagName('proposition')[0].childNodes[0].nodeValue;
+        //prop2=cartes[cardNumber].getElementsByTagName('proposition')[1].childNodes[0].nodeValue;
 
         //On affiche les elements dans le html
         document.getElementById('note').textContent = question;
@@ -101,6 +126,16 @@ function getCardNumber(xml){
     }
     cartesrestantes[cardNumber]=0;
     return cardNumber;
+}
+function integrerStat(){
+    //on recupere le nom et la valeur de la stat
+    //stats[0].getElementsByTagName('budgetglobal')[0].childNodes[0].nodeValue
+    //stats[0].getElementsByTagName('budgetglobal')[0].childNodes[0].nodeValue = 9;
+    //on applique la stat a xmlDoc
+    console.log(xmlDoc.getElementsByTagName('carte')[cardNumber]);
+    
+    
+
 }
 
 
