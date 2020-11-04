@@ -1,5 +1,17 @@
+//Variables en jeu
 let playing=false;
 let score=0;
+
+//XMLHttpRequest des cartes et des stats pendant le jeu
+var xmlDoc;
+var xmlDoc2;
+//le deck de cartes : liste d indice des questions non posee
+var cartesrestantes;
+var nbrCartesRestantesDebutJeu;
+
+//la carte en cours
+var cardNumber;
+
 
 
 document.getElementById('start').onclick=function(){
@@ -7,9 +19,13 @@ document.getElementById('start').onclick=function(){
     generatetxt('cartes.xml');
     generatetxt('stat.xml');
 }
+console.log(document);
 /**
 document.getElementById('bouton').onclick=function(){
-    re  affiche les stat en cours
+    //tire une carte du paquet de cartes restantes
+
+    //re  affiche les stat en cours
+    
 }*/
 
 function generatetxt(nomFichier) {
@@ -21,16 +37,18 @@ function generatetxt(nomFichier) {
     };
     xhttp.open("GET", nomFichier, true);
     xhttp.send();
-    
 }
 
 function chargement(xml, fichierdepart) {
     if (fichierdepart=='cartes.xml') {
-        //recupere les cartes
-        var xmlDoc = xml.responseXML;
 
-        //on choisis la carte
-        cardNumber=0;
+        if (xmlDoc==undefined){
+            //recupere les cartes en debut de partie
+            xmlDoc = xml.responseXML;
+        }
+
+        //on choisis une carte parmis les cartes restantes
+        cardnumber=getCardNumber(xml);
 
         //on récupère la carte
         cartes = xmlDoc.getElementsByTagName('carte');
@@ -46,8 +64,10 @@ function chargement(xml, fichierdepart) {
             document.getElementById('option'+ (i+1)).textContent = cartes[cardNumber].getElementsByTagName('proposition')[i].childNodes[0].nodeValue;
         }
     }if (fichierdepart=='stat.xml') {
-        //on recup stat globales
-        var xmlDoc2 = xml.responseXML;
+        if (xmlDoc2==undefined){
+            //on recup stat globales
+            xmlDoc2 = xml.responseXML;
+        }
 
         //on recupère les stat
         stats = xmlDoc2.getElementsByTagName('stat');
@@ -55,11 +75,32 @@ function chargement(xml, fichierdepart) {
         //recuperation valeur de stat A COMPLETER
         budgetglobal = stats[0].getElementsByTagName('budgetglobal')[0].childNodes[0].nodeValue;
         
+        //On affiche les elements dans le html
+        document.getElementById('qtn').textContent = budgetglobal;
+        //AFFICHAGE MEGA STYLE
+
         //on affiche les stat
         console.log(budgetglobal);
-
     }
     
+}
+function getCardNumber(xml){
+    
+    //console.log(cartesrestantes);
+
+    if (cartesrestantes==undefined){
+        nbrCartesRestantesDebutJeu = xml.responseXML.getElementsByTagName('carte').length;
+        cartesrestantes = new Array(nbrCartesRestantesDebutJeu);
+        for (i=0; i<(nbrCartesRestantesDebutJeu+1); i++){
+            cartesrestantes[i]=1;
+        }
+    }
+    cardNumber= Math.floor(Math.random() * (nbrCartesRestantesDebutJeu));
+    while(cartesrestantes[cardNumber]!=1){
+        cardNumber= Math.floor(Math.random() * (nbrCartesRestantesDebutJeu));
+    }
+    cartesrestantes[cardNumber]=0;
+    return cardNumber;
 }
 
 
