@@ -4,7 +4,7 @@ Vous avez des problèmes de trafic
 Vous proposez une alternances de circulation des plaques dans la ville
 	<traficglobal>%2
 	<co2>-8
-Vous mettez à disposition des velos dans la ville
+Vous mettez à disposition des vélos dans la ville
 	<traficglobal>-30
 	<velo> +20
 	<voitureessenceoudiesel> -20
@@ -14,12 +14,12 @@ Vous mettez en place une nouvelle ligne de transport en commun ecofuel
 	<transportencommun>+30
 	<voitureessenceoudiesel>-30
 	<co2>-15
-Vous mettez un radard a tout les feux rouges de la ville 
+Vous mettez un radard à tout les feux rouges de la ville 
 	<traficglobal>-20
-    <voitureelectrique>-2
-    <voitureessenceoudiesel>-10
-    <velo>+10
-    <pedestre>+5
+    	<voitureelectrique>-2
+    	<voitureessenceoudiesel>-10
+   	<velo>+10
+    	<pedestre>+5
 	<co2>-8
 ****************************************************************************
 Afin d'augmenter le nombre de véhicules électriques dans votre ville
@@ -29,7 +29,7 @@ Vous proposez un bonus à l'achat de ce type de véhicule (financement 130000e)
 	<adhesionecologique>+5
 	<voitureessenceoudiesel>-20
 	<co2>-10
-	<budgetglobal>-30000e
+	<budgetglobal>-130000e
 Vous envoyez de la pub pour ces véhicules
 	<bienetre>-10
 	<voitureelectrique>+2
@@ -48,6 +48,7 @@ Vous installez des bornes de recharges pour les véhicules électriques (finance
 	<adhesionecologique>+5
 	<voitureessenceoudiesel>-12
 	<co2>-5
+	<bornederecharge>True
 
 ******************************************************************************
 Vous envisagez de mettre en place un nouveau potager urbain
@@ -82,3 +83,162 @@ Vous employez quelqu'un pour qu'il gère le terrain (financement 100000e)
 	<adhesionecologique>+5
 Finalement j'aime pas les potagers
 	<abeille>-2
+
+********************************************************************************************
+
+Vous souhaitez réduire la pollution sonore de votre ville
+<sonore>+20
+Vous réduisez le trafic automobile en instaurant une alternance des plaques autorisées à rouler dans votre ville
+<traficglobal>%2
+	<co2>-8
+	<sonore>-5
+Vous ordonnez au bar de fermer après 21h (financement 30000e)
+	<budgetglobal>-30000
+<bienetre>-10
+	<santeentale>-10
+	<sonore>-15
+Vous instaurez un confinement (financement 50000e)
+	<budgetglobal>-50000
+<bienetre>-10
+	<santeentale>-10
+	<sonore>-20
+Vous mettez en place une petition pour decaler le trafic aérien sur une autre ville
+<bienetre>+10
+	<santeentale>+10
+	<sonore>-10
+
+********************************************************************************************
+Vous souhaitez augmenter le nombre de personnes recyclant leur déchets dans votre ville
+	 <triselectif>-10
+Vous mettez en place une taxe aux usagers ne respectant pas le tri sélectif (recette 5000e)
+	<budgetglobal>+5000
+	<bienetre>-5
+	<santeentale>-10
+	<decheturbain>-10
+Vous organisez des réunions d'informations sur l'importance du tri sélectif (financement 10000e)
+	<budgetglobal>-10000
+	<bienetre>+5
+	<santeentale>+5
+	<decheturbain>-15
+	<triselectif>+10
+
+Vous mobilisez un terrain pour enterrer les déchets (financement 20000e)
+	<budgetglobal>-20000
+	<decheturbain>+10
+<triselectif>-5
+<vert>-10
+
+Vous engagez un dragon pour qu'il brûle les déchets (financement 50000e)
+	<budgetglobal>-50000
+<bienetre>-5
+	<santeentale>-10
+	<decheturbain>-10
+	<sonore>+30
+
+*********************************************************************************
+Vous souhaitez réduire les déchets de votre ville
+	<decheturbain>+20
+Vous mettez en place un arrêté pour interdire aux supermarchés de vendre des poches en plastique
+	<decheturbain>-10
+Vous aidez à l'implantation d'un magasin bio (financement 100000e)
+	<budgetglobal>-100000
+<bienetre>+10
+<decheturbain>-15
+<adhesionecologique>+5
+Vous mettez une amende aux personnes se promenant avec des poches en plastique en ville (recette 5000e)
+	<budgetglobal>+5000
+	<bienetre>-10
+	<santeentale>-10
+	<decheturbain>-10
+Vous mettez des affiches dans la ville pour informer du méfait du plastique (financement 10000e)
+	<budgetglobal>-10000
+	 <adhesionecologique>+5
+<decheturbain>-8
+
+*************************************************************************************
+Vous sentez que vos concitoyens ne se sentent pas en bonne santé mentale
+<santeentale>-30
+Vous mettez en place des groupes de parole (financement 5000e)
+	<budgetglobal>-5000
+	<santeentale>+15
+	<bienetre>+10
+Vous aidez une psychologue à s'installer dans votre ville (financement 30000e)
+	<budgetglobal>-30000
+	<santeentale>+25
+	<bienetre>+15
+Vous organisez une fete de ville (financement 20000e)
+	<budgetglobal>-20000
+	<santeentale>+20
+	<bienetre>+15
+	<sonore>-10
+
+Vous proposez des activités sportives, culturelles à faire dans la ville (financement 10000e)
+	<budgetglobal>-10000
+	<santeentale>+10
+       	<santephysique>+15
+<bienetre>+10
+*******************************************************************************
+Vous souhaitez réduire la pollution de l'air dans votre ville
+<co2>+20
+Vous favorisez les transports en commun, le convoiturage
+	<sonore>-20
+	<co2>-10
+<voitureelectrique> -2
+        	<voitureessenceoudiesel> -5
+       	<transportencommun> +10
+Vous incitez la circulation en vélo ou à pied
+	<sonore>-20
+	<co2>-15
+	<velo> +5
+        	<pedestre>+5
+	<santephysique>+10
+	<voitureelectrique> -2
+        	<voitureessenceoudiesel> -3
+Vous construisez un hyperloop (financement 500000e)
+	<budgetglobal>-500000
+	<sonore>-20
+	<co2>-20
+<voitureelectrique> -5
+        	<voitureessenceoudiesel> -10
+Vous installez un rond point végétal (financement 50000e)
+	<budgetglobal>-50000
+	<rondpointvegetal> True
+	<co2>-10
+	<bienetre>+10
+
+
+
+
+*******************************************************************************
+Vos devez créer une nouvelle infrastructure, vous choisissez :
+-La centrale électrique (financement 350000e)
+	<budgetglobal>-350000
+<centralelectriquesuperieur>True
+ 	<typesfossile>-10
+	<typerenouvelable> +15
+	<santeentale>-15
+	<bienetre>-10
+	<adhesionecologique>+3
+-Une gigafactory (financement 500000e)
+	<budgetglobal>-500000
+        	<gigafactory>True
+	<typerenouvelable> +30
+	<typesfossile>-15
+	<bienetre>-5
+	<santeentale>-10
+	<adhesionecologique>+5
+-Un parc éolien (financement 400000e)
+	<budgetglobal>-400000
+           <parceolien> True
+	<typerenouvelable> +25
+	<typesfossile>-12
+	<bienetre>-8
+	<santeentale>-10
+	<adhesionecologique>+3
+-Une centrale de gestion des eaux usées (financement 300000e)
+	<budgetglobal>-400000
+	<gestioneauusee> True
+	<co2>+10
+	<bienetre>-10
+	<santeentale>-15
+ 	<sonore>+5
