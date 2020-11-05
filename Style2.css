@@ -1,0 +1,34 @@
+/*//////// CSS des cercles statistiques //////////*/
+#circlebar{
+    margin-top: 180px;
+    text-align: center;
+    font-family: tahoma;
+  }
+  #circlebar .round{
+    min-height: 255px;
+    margin-top: 30px;
+    position:relative;
+    margin-bottom: 20px;
+  }
+  #circleBar .round strong{
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 35px;
+    transform: translate(-50%);
+    font-size: 40px;
+    color: #212121;
+  }
+  #circleBar span{
+    display: block;
+    color:#ff5c5c;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  #circleBar span i {
+    color: #ff5c5c;
+    font-size: 22px;
+    margin-right: 7px;
+  }
+  section button:hover{
+    background-color: #ff5c5c;
+  }
