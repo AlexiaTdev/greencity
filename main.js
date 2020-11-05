@@ -57,7 +57,14 @@ document.getElementById('option4').onclick=function(){
     generatetxt('stat.xml');
 }
 
+function Circlle(el){
 
+    $(el).circleProgress({fill:{color:'#ff5c5c'}})
+    .on('circle-animation-progress', function(event, progress, stepValue){
+
+      $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+     });
+}
 
 function generatetxt(nomFichier) {
     var xhttp = new XMLHttpRequest();
@@ -69,7 +76,6 @@ function generatetxt(nomFichier) {
     xhttp.open("GET", nomFichier, true);
     xhttp.send();
 }
-
 function chargement(xml, fichierdepart) {
     if (fichierdepart=='cartes5.xml') {
         //console.log('xmldoc is '+xmlDoc);
@@ -110,7 +116,8 @@ function chargement(xml, fichierdepart) {
         document.getElementById('qtn').textContent = budgetglobal;
         
         //AFFICHAGE MEGA STYLE*******************************************************************
-        //document.getElementById("header").setAttribute("datav", "nimportequoi");
+        document.getElementById("header").setAttribute("datav", "nimportequoi");
+        //Circlle('.round');
     }
     
 }
