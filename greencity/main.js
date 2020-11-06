@@ -5,6 +5,7 @@ let score=0;
 //XMLHttpRequest des cartes et des stats pendant le jeu
 var xmlDoc;
 var xmlDoc2;
+var stats;
 //le deck de cartes : liste d indice des questions non posee
 var cartesrestantes;
 var nbrCartesRestantesDebutJeu;
@@ -17,7 +18,10 @@ var propositionEnCours;
 //nombre de tour
 var nombreToursJoues=0;
 
-texteIntroduction="Bonjour! vous etes le maire de votre ville. L'objectif est de rendre la ville plus verte <3. Pour cela, vous allez avoir une situation et plusieurs reponses vous serez proposees. Vos reponses vont influencer les statistiques de votre ville."
+var texteIntroduction="Bonjour! vous etes le maire de votre ville. L'objectif est de rendre la ville plus verte <3. Pour cela, vous allez avoir une situation et plusieurs reponses vous serez proposees. Vos reponses vont influencer les statistiques de votre ville."
+var textefintop="Bravo, vous etes le meilleur maire de GreenCity"
+var textefinmid="Pas mal, mais vous n'avez pas beaucoup bosse... peu mieux faire!"
+var textefincata="Catastrophe! mais bon on apprends en se trompant...."
 
 //seul le div de debut saffiche
 document.getElementById('container').style.display="none";
@@ -70,6 +74,8 @@ document.getElementById('option4').onclick=function(){
     //re  affiche les stat en cours + nouvelle question
     generatetxt('cartes5.xml');
     generatetxt('stat.xml');
+    //chargement('cartes5.xml');
+    //chargement('stat.xml');
     nombreToursJoues=nombreToursJoues+1;
     findepartie(nombreToursJoues);
 }
@@ -77,6 +83,18 @@ document.getElementById('option4').onclick=function(){
 function findepartie(nombreToursJoues) {
     //fontion de nbr tour
     if(nombreToursJoues>5) {
+        //QUELMAIRE EST IL 
+        scorefinal= (stats[0].getElementsByTagName('abeille')[0].childNodes[0].nodeValue)/100;
+        if (scorefinal>80){
+            document.getElementById('appreciation').textContent= textefintop;
+        }if (scorefinal<10){
+            document.getElementById('appreciation').textContent= textefincata;
+        }else {
+            document.getElementById('appreciation').textContent= textefinmid;
+        }
+        //document.getElementById('statfinjeu').textContent= (scorefinal*100)+" %";
+        document.getElementById("statfinjeu").setAttribute("data-value", scorefinal);
+
         document.getElementById('container').style.display="none";
         document.getElementById('finjeu').style.display="block";
     }
@@ -106,7 +124,6 @@ function generatetxt(nomFichier) {
 }
 function chargement(xml, fichierdepart) {
     if (fichierdepart=='cartes5.xml') {
-        //console.log('xmldoc is '+xmlDoc);
 
         if (xmlDoc==undefined){
             //recupere les cartes en debut de partie
@@ -172,18 +189,20 @@ function chargement(xml, fichierdepart) {
 
         
         //AFFICHAGE MEGA STYLE*******************************************************************
-        //document.getElementById("budgetglobal").setAttribute("data-value", budgetEnPourc);
         document.getElementById("energiefo").setAttribute("data-value", typesfossile);
         document.getElementById('budget').textContent=budgetglobal;
         document.getElementById("traficglobal").setAttribute("data-value", traficglobal);
+        document.getElementById("parcs").setAttribute("data-value", vert);
+        document.getElementById("pollution").setAttribute("data-value", co2);
+        document.getElementById("decheturbain").setAttribute("data-value", decheturbain);
+        document.getElementById("bienetre").setAttribute("data-value", santeentale);
+        document.getElementById("transportencommun").setAttribute("data-value", transportencommun);
+        document.getElementById("triselectif").setAttribute("data-value", triselectif);
+        document.getElementById("santephysique").setAttribute("data-value", santephysique);
+        document.getElementById("voitureelectrique").setAttribute("data-value", voitureelectrique);
+        document.getElementById("voitureessence").setAttribute("data-value", voitureessenceoudiesel);
+        document.getElementById("adhesionecologique").setAttribute("data-value", adhesionecologique);
 
-        
-
-
-
-        //console.log(document.getElementById("header"));
-        //traffic
-        //Circlle('.round');
         Circlle('.round');
     }
     
