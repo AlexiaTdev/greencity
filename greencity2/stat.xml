@@ -1,0 +1,53 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<stat>
+	<budgetglobal>1000000</budgetglobal>
+    <trafficurbain>
+		<traficglobal>20</traficglobal>
+        <voitureelectrique>5</voitureelectrique>
+        <voitureessenceoudiesel>85</voitureessenceoudiesel>
+        <transportencommun>0</transportencommun>
+        <velo>5</velo>
+        <pedestre>5</pedestre>
+    </trafficurbain>
+    <energie>
+        <typesfossile>95</typesfossile>
+        <typerenouvelable>5</typerenouvelable>
+        <équipementpopulationenrenouvelable>0</équipementpopulationenrenouvelable>
+    </energie>
+    <ecosysteme>
+        <abeille>10</abeille>
+    </ecosysteme>
+    <espacevert>
+        <vert>2</vert>
+    </espacevert>
+    <population>
+        <santeentale>50</santeentale>
+        <santephysique>50</santephysique>
+        <bienetre>50</bienetre>
+        <adhesionecologique>5</adhesionecologique>
+    </population>
+    <pollution>
+        <decheturbain>10</decheturbain>
+        <co2>20</co2>
+        <sonore>15</sonore>
+        <lumineuse>15</lumineuse>
+        <triselectif>5</triselectif>
+    </pollution>
+    <infrastructure>
+        <centralelectriquesuperieur>False</centralelectriquesuperieur>
+        <gigafactory>False</gigafactory>
+        <parceolien>False</parceolien>
+        <gestioneauusee>False</gestioneauusee>
+        <transportinfrastructure>
+            <tramway>False</tramway>
+            <metro>False</metro>
+            <hyperloop>False</hyperloop>
+        </transportinfrastructure>
+        <aeroport>False</aeroport>
+        <rondpointvegetal>False</rondpointvegetal>
+		<bornederecharge>False</bornederecharge>
+		<potagerurbain>False</potagerurbain>
+    </infrastructure>
+</stat>
+	
+	
